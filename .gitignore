@@ -1,2 +1,4 @@
 /.idea
-/css
+
+# We need to add this to .gitignore, but for GitHub.io CSS files are required
+# /css
