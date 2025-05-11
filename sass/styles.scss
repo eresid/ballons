@@ -20,8 +20,113 @@ body {
 }
 
 .header {
+    position: relative;
     height: 95vh;
     background: linear-gradient(90.05deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(1, 1, 1, 0.7) 99.94%),
         url('../images/hero-image.avif') center / cover no-repeat;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+
+    &__logo {
+        width: 56px;
+        height: 70px;
+
+        position: absolute;
+        left: 50px;
+        top: 50px;
+    }
+
+    &__box {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.title {
+    color: white;
+
+    &__primary {
+        display: block;
+        font-weight: 800;
+        font-size: 50px;
+        line-height: 60px;
+        letter-spacing: 10px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+
+        animation-name: leftToRight;
+        animation-duration: 1.7s;
+        animation-delay: 1s;
+        animation-timing-function: ease;
+        backface-visibility: hidden;
+    }
+
+    &__secondary {
+        display: block;
+        font-weight: 200;
+        font-size: 40px;
+        line-height: 48px;
+        letter-spacing: 5px;
+        margin-bottom: 65px;
+
+        animation-name: rightToLeft;
+        animation-duration: 1.7s;
+        animation-delay: 1s;
+        animation-timing-function: ease;
+        backface-visibility: hidden;
+    }
+}
+
+.button {
+    &:link,
+    &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #777777;
+        background: white;
+        padding: 15px 40px;
+        border-radius: 50px;
+        display: inline-block;
+        transition: all 0.1s;
+    }
+
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.4));
+    }
+    &:active {
+        transform: translateY(-2px);
+        box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.2));
+    }
+}
+
+@keyframes leftToRight {
+    0% {
+        opacity: 0;
+        transform: translate(-100px);
+    }
+    80% {
+        transform: translate(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0px);
+    }
+}
+
+@keyframes rightToLeft {
+    0% {
+        opacity: 0;
+        transform: translate(100px);
+    }
+    80% {
+        transform: translate(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0px);
+    }
 }
