@@ -33,3 +33,43 @@
     line-height: 140%;
     font-weight: 400;
 }
+
+.gallery {
+    // Necessary for the father's block,
+    // so that the daughter elements are placed
+    // in the base block, and not whole body
+    position: relative;
+
+    &__photo {
+        position: absolute;
+        width: 60%;
+        box-shadow: $box-shadow;
+        border-radius: 0.5rem;
+        transition: all 0.4s;
+        outline-offset: 1rem;
+
+        &_n1 {
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+        &_n2 {
+            top: 13rem;
+            left: 2rem;
+            z-index: 3;
+        }
+        &_n3 {
+            top: 7rem;
+            left: 18rem;
+            z-index: 2;
+        }
+        &:hover {
+            transform: scale(1.1);
+            z-index: 5;
+            outline: 1rem solid $color-brown-light;
+        }
+    }
+    &:hover &__photo:not(:hover) {
+        transform: scale(0.95);
+    }
+}
