@@ -1,0 +1,28 @@
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    // It is necessary for people with poor eyesight
+    // to be able to enlarge the font
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Roboto';
+    font-weight: 400;
+    color: $color-gray;
+    font-size: 16px;
+    letter-spacing: 2px;
+
+    background-color: $color-white;
+    padding: 50px;
+}
+
+.container {
+    background-color: #f7f7f7;
+}
