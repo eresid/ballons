@@ -7,6 +7,10 @@
 ## Tools
 
 -   [CSS clip-path Maker](https://bennettfeely.com/clippy/)
+-   [Emmet Documentation](https://docs.emmet.io/)
+-   [BEM](https://en.bem.info/methodology/)
+-   [Can I Use CSS](https://caniuse.com/)
+-   [Special Characters (Glyphs)](https://css-tricks.com/snippets/html/glyphs/)
 
 ## Figma Files (Design)
 
