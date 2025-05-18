@@ -254,6 +254,79 @@ body {
           transform: scale(0.95);
 }
 
+.section-services {
+  padding: 21rem 0;
+  margin-top: 10rem;
+  background: linear-gradient(90.05deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(0, 0, 0, 0.7) 99.94%), url("../images/services-background.avif") center/cover no-repeat;
+  -webkit-transform: skewY(7deg);
+          transform: skewY(7deg);
+}
+.section-services > * {
+  -webkit-transform: skewY(-7deg);
+          transform: skewY(-7deg);
+}
+
+.services-card {
+  padding: 2.5rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.services-card:hover {
+  -webkit-transform: translateY(-1.5rem) scale(1.1);
+          transform: translateY(-1.5rem) scale(1.1);
+}
+.services-card__icon {
+  display: inline-block;
+  font-size: 6rem;
+  background: linear-gradient(90.05deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(161, 79, 3, 0.7) 99.94%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+}
+
+.section-pricing {
+  padding: 21rem 0;
+}
+
+.pricing-card {
+  position: relative;
+  height: 52rem;
+  -webkit-perspective: 150rem;
+          perspective: 150rem;
+}
+.pricing-card__side {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  height: 52rem;
+  -webkit-transition: all 0.7s ease-out;
+  transition: all 0.7s ease-out;
+}
+.pricing-card__side_front {
+  background-color: cadetblue;
+}
+.pricing-card__side_back {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  background: linear-gradient(120deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(161, 79, 3, 0.7) 99.94%);
+}
+.pricing-card:hover .pricing-card__side_front {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+.pricing-card:hover .pricing-card__side_back {
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+}
+
 .header {
   position: relative;
   height: 95vh;
