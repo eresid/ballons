@@ -122,29 +122,110 @@
         left: 0;
         width: 100%;
         backface-visibility: hidden;
-
+        box-shadow: $box-shadow;
         height: 52rem;
-        transition: all 0.7s ease-out;
-
-        &_front {
-            background-color: cadetblue;
-        }
+        transition: all 0.3s ease-out;
+        border-radius: 0.5rem;
+        overflow: hidden;
 
         &_back {
             transform: rotateY(180deg);
-            background: linear-gradient(
-                120deg,
-                rgba($color-brown-light, 0.7) 0.03%,
-                rgba($color-brown-dark, 0.7) 99.94%
-            );
+            background: linear-gradient(120deg, $color-brown-light, $color-brown-dark);
         }
     }
 
     &:hover &__side_front {
-        transform: rotateY(180deg);
+        transform: rotateY(-180deg);
     }
 
     &:hover &__side_back {
         transform: rotateY(0deg);
+    }
+
+    &__image {
+        height: 21rem;
+        background-blend-mode: hard-light;
+        clip-path: polygon(0, 0, 100%, 0, 100%, 100%, 0, 80%);
+
+        &_1 {
+            background: $color-brown-light url('../images/pricing-1.avif') center / cover no-repeat;
+        }
+        &_2 {
+            background: $color-brown-light url('../images/pricing-2.avif') center / cover no-repeat;
+        }
+        &_3 {
+            background: $color-brown-light url('../images/pricing-3.avif') center / cover no-repeat;
+        }
+    }
+
+    &__title {
+        font-size: 2.8rem;
+        letter-spacing: 0.2rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        text-align: right;
+        position: absolute;
+        top: 17rem;
+        right: 0;
+        color: $color-white;
+    }
+
+    &__span {
+        background: linear-gradient(90deg, $color-brown-light, $color-brown-dark);
+        padding: 1rem 2rem 0.3rem 2rem;
+
+        &_second {
+            position: absolute;
+            top: 3.4rem;
+            right: 0;
+            padding-bottom: 1rem;
+        }
+    }
+
+    &__description {
+        margin-top: 7rem;
+
+        ul {
+            list-style: none;
+            margin: 0 auto;
+            width: 75%;
+            text-align: center;
+
+            li {
+                font-size: 1.6rem;
+                letter-spacing: 0.2rem;
+                color: $color-gray;
+                border-bottom: 1px solid $color-gray;
+                display: inline-block;
+
+                &:not(:last-child) {
+                    margin-bottom: 2rem;
+                }
+            }
+        }
+    }
+
+    &__back-side {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &__text {
+        margin-bottom: 8rem;
+        letter-spacing: 0.2rem;
+        text-transform: uppercase;
+        color: $color-white;
+        text-align: center;
+
+        &_1 {
+            font-size: 1.6rem;
+            font-weight: 300;
+        }
+
+        &_2 {
+            font-size: 6rem;
+            font-weight: 500;
+        }
     }
 }
